@@ -48,6 +48,9 @@ h1 {
 	font-size:0.9rem;
 	margin-top:0;
 }
+.connections img {
+	padding-right:4px;
+}
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
 	.half {width:48%;}
