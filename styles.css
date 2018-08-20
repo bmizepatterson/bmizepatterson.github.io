@@ -7,8 +7,10 @@ body {
 	background-color:#EEE;
 	font-family: 'Open Sans', sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Bubblegum Sans', Verdana, sans-serif;
+h1 {
+	font-family: 'Life Savers', Verdana, sans-serif;
+	margin-bottom:0;
+	font-size:3em;
 }
 .container {
 	padding:16px;
