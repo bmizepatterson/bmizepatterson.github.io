@@ -26,6 +26,7 @@ h1 {
 .tagline {
 	color:#777;
 	font-size:0.9rem;
+	margin-top:0;
 }
 
 @media only screen and (min-width:600px) {
