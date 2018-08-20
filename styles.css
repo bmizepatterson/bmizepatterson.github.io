@@ -14,13 +14,21 @@ h1, h2, h3, h4, h5, h6 {
 	padding:16px;
 }
 .parallax {
-	background-image:url(img/ben1500.jpg);
 	height:100%;
-	background-attachment: fixed;
+	background-image:url(img/ben1500.jpg);
+	background-attachment: scroll;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-@media (max-width:600px) {
-	.parallax{background-attachment: scroll;}
+.tagline {
+	color:#777;
+	font-size:0.9rem;
+}
+
+@media only screen and (min-width:600px) {
+	.parallax {background-attachment: fixed;}
+}
+@media only screen and (max-width:600px) {
+	.mobile-hide {display:none;}
 }
