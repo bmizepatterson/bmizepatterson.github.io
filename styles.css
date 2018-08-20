@@ -48,16 +48,6 @@ h1 {
 	font-size:0.9rem;
 	margin-top:0;
 }
-.menu ul {
-	margin:8px 0;
-	padding:0;
-	text-align:center;
-}
-.menu li {
-	display:inline;
-	margin:0;
-	padding:4px;
-}
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
 	.half {width:48%;}
