@@ -48,6 +48,9 @@ h1 {
 	font-size:0.9rem;
 	margin-top:0;
 }
+.connections {
+	margin-top:3rem;
+}
 .connections img {
 	padding-right:4px;
 }
