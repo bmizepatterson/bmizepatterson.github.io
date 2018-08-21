@@ -6,6 +6,7 @@ html, body {
 body {
 	background-color:#EEE;
 	font-family: 'Open Sans', sans-serif;
+	animation:opac 1s;
 }
 h1 {
 	font-family: 'Life Savers', Verdana, sans-serif;
@@ -103,3 +104,4 @@ h1 {
 @media only screen and (max-width:600px) {
 	.mobile-hide {display:none;}
 }
+@keyframes opac{from{opacity:0} to{opacity:1}}
