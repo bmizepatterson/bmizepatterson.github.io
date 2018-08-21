@@ -54,7 +54,13 @@ h1 {
 	margin-top:3rem;
 }
 .connections img {
-	padding-right:8px;
+	display:block;
+	float:left;
+	margin:4px;
+	transition: 0.2s;
+}
+.connections img:hover {
+	transform: scale(1.25,1.25);
 }
 .tiles {
 	margin:0;
