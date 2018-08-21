@@ -51,7 +51,8 @@ h1 {
 	margin-top:0;
 }
 .connections {
-	margin-top:3rem;
+	margin:2rem 0;
+	height:32px;
 }
 .connections img {
 	display:block;
