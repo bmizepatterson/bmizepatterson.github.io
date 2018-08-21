@@ -91,14 +91,14 @@ h1 {
 	top:0;
 	height:100%;
 	width:100%;
-	background-color:rgba(238,238,238,0.7);
+	background-color:rgba(0,0,0,0.75);
 }
 .tiles a:link {
 	text-decoration: none;
-	color:black;
+	color:white;
 }
 .tiles a:visited {
-	color:black;
+	color:white;
 }
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
