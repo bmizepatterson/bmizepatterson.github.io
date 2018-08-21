@@ -73,6 +73,7 @@ h1 {
 }
 .tiles li:hover p {
 	display:block;
+	animation:opac 0.3s forwards;
 	position:absolute;
 	top:0;
 	left:0;
