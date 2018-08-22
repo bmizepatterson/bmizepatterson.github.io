@@ -29,6 +29,29 @@ layout: default
 	<div class="twothirds">
 		<h2>About Ben</h2>
 		<p>I've taught Latin online and in the classroom for ten years, but I'm currently pursuing web development through <a href="https://www.awesomeincu.com/bootcamp/">Awesome Inc's Developer Bootcamp</a>. </p>
+		
+		{%- if site.posts.size > 0 -%}
+			<h2>Posts</h2>
+			    <ul class="post-list">
+	  			{%- for post in site.posts -%}
+					<li>
+						<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+						<h3>
+						  <a class="post-link" href="{{ post.url | relative_url }}">
+						    {{ post.title | escape }}
+						  </a>
+						</h3>
+						{%- if site.show_excerpts -%}
+						  {{ post.excerpt }}
+						{%- endif -%}
+					</li>
+					{%- endfor -%}
+				</ul>
+
+			<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+		{%- endif -%}
+
+
 		<h2>Influences</h2>
 			<ul class="tiles">
 				<li>
