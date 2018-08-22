@@ -1,6 +1,6 @@
 ---
 title: Test Post
-layout: default
+layout: post
 Date: 2018-08-22 11:08:28
 ---
 

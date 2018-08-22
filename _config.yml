@@ -23,7 +23,7 @@ github_username:  bmizepatterson
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-primer
+theme: minima
 plugins:
   - jekyll-feed
 
