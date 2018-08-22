@@ -3,8 +3,8 @@
 
 Find me on:
 
-[![bmizepatterson@gmail.com](assets/img/logo_gmail_64px.png)](mailto:bmizepatterson@gmail.com)&nbsp;&nbsp;
-[![Ben Patterson on GitHub](assets/img/GitHub-Mark-64px.png)](https://github.com/bmizepatterson)&nbsp;&nbsp;
-[![Ben Patterson on LinkedIn](assets/img/In-2C-66px-TM.png)](https://www.linkedin.com/in/bmizepatterson)
-[![Ben Patterson on Stack Overflow](assets/img/so-icon-64.png)](https://stackoverflow.com/users/6894436/ben-patterson?tab=profile)
+- [Email](mailto:bmizepatterson@gmail.com)
+- [GitHub](https://github.com/bmizepatterson)
+- [LinkedIn](https://www.linkedin.com/in/bmizepatterson)
+- [StackOverflow](https://stackoverflow.com/users/6894436/ben-patterson?tab=profile)
 
