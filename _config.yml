@@ -16,6 +16,7 @@
 title: Ben Patterson
 email: bmizepatterson@gmail.com
 description: Educator, classicist, developer, eater of chocolate
+lang: "en-US"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bmizepatterson.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: magister_p
