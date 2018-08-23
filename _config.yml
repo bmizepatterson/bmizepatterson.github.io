@@ -32,7 +32,7 @@ plugins:
   - jekyll-feed
 show_excerpts: true
 header_pages:
-  - index.html
+  - index.md
   - about.md
   - portfolio.md
 
