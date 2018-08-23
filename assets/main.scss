@@ -50,21 +50,17 @@ h1 {
 	font-size:0.9rem;
 	margin-top:0;
 }
-.connections {
-	margin:2rem 0;
-	height:32px;
-}
-.connections img {
-	display:block;
-	float:left;
-	margin:4px;
-	transition: 0.2s;
-}
-.connections img:hover {
-	transform: scale(1.25,1.25);
-}
 .site-header {
 	border:none;
+}
+.social-media-list {
+	font-size: 0.9rem;
+}
+.social-media-list svg {
+	transition: 0.2s;
+}
+.social-media-list svg:hover {
+	transform: scale(1.25,1.25);
 }
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
