@@ -30,6 +30,10 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+show-excerpts: true
+header_pages:
+  - index.html
+  - about.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
