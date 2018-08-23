@@ -15,12 +15,15 @@ body {
 	background-color:#EEE;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	font-size: 1.4rem;
 }
 h1 {
 	font-family: 'Life Savers', Verdana, sans-serif;
 	margin-bottom:0;
-	font-size:3em;
+	font-size:3rem;
+}
+p, ol, ul {
+	font-size: 1.4rem;
+	line-height: 1.7;	
 }
 .container {
 	width:100%;
@@ -38,7 +41,7 @@ h1 {
 	padding:0 1%;
 }
 .content {
-	margin-right: 10%;
+	margin-right: 20%;
 }
 .parallax {
 	background-image:url({{ "/assets/img/ben1500.jpg" | relative_url }});
@@ -56,19 +59,40 @@ h1 {
 .tagline {
 	color:#777;
 	font-size:0.9rem;
-	margin-top:0;
+	margin-bottom:1rem;
 }
 .site-header {
 	border:none;
 }
 .social-media-list {
 	font-size: 0.9rem;
+	line-height: initial;
+	margin-bottom:2rem;
 }
 .social-media-list svg {
 	transition: 0.2s;
 }
 .social-media-list li:hover svg {
 	transform: scale(1.25,1.25);
+}
+.footnote {
+	font-size: 0.9rem;
+}
+.footnotes {
+	margin-top: 2rem;
+	border-top: 1px solid #CCC;
+}
+.footnotes ol, .footnotes li, .footnotes p {
+	font-size:0.9rem;
+	color: #777;
+}
+.post-list > li, .post-list p {
+    font-size: initial;
+    line-height: initial;
+}
+.rss-subscribe {
+	font-size: 0.9rem;
+    color: #777;
 }
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
@@ -79,5 +103,6 @@ h1 {
 }
 @media only screen and (max-width:600px) {
 	.mobile-hide {display:none;}
+	.content {width:90%;}
 }
 @keyframes opac{from{opacity:0} to{opacity:1}}
