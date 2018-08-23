@@ -1,7 +1,0 @@
----
-title: Test Post
-layout: post
-Date: 2018-08-22 11:08:28
----
-
-This is my first blog post!
