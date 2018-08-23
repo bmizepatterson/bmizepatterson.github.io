@@ -38,12 +38,17 @@ h1 {
 	padding:0 1%;
 }
 .parallax {
-	height:100%;
 	background-image:url({{ "/assets/img/ben1500.jpg" | relative_url }});
 	background-attachment: scroll;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+.parallax.top {
+	height:10%;
+}
+.parallax.bottom {
+	height:100%;
 }
 .tagline {
 	color:#777;
