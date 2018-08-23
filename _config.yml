@@ -30,11 +30,16 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-show-excerpts: true
+show_excerpts: true
 header_pages:
   - index.html
   - about.md
 
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+  
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
