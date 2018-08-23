@@ -16,9 +16,9 @@
 title: Ben Patterson
 email: bmizepatterson@gmail.com
 description: Educator, classicist, developer, eater of chocolate
-lang: "en-US"
+lang: en-US
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://bmizepatterson.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://bmizepatterson.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: magister_p
 github_username:  bmizepatterson
 linkedin_username: bmizepatterson
@@ -36,10 +36,28 @@ header_pages:
   - about.md
   - portfolio.md
 
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: en-US
+      author: Ben Patterson
+
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
   date_format: "%B %e, %Y"
+
+# Jekyll-seo-tag settings
+logo: /assets/img/bp_logo.svg
+social:
+  name: Ben Patterson
+  links:
+    - https://twitter.com/magister_p
+    - https://www.facebook.com/benmizepatterson
+    - https://www.linkedin.com/in/bmizepatterson
+    - https://github.com/bmizepatterson
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
