@@ -39,7 +39,7 @@ header_pages:
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
-  date_format: "%b %-d, %Y"
+  date_format: "%B %e, %Y"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
