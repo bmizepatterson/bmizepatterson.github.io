@@ -20,8 +20,21 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+        
         {%- if site.show_excerpts -%}
+        <div class="post-excerpt">
           {{ post.excerpt }}
+        </div>
+        {%- endif -%}
+
+        {%- if post.categories.size > 0 -%}
+          <div class="post-categories">
+          {%- for category in post.categories -%}
+            <a class="post-category" href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>
+            {%- unless forloop.last -%}&nbsp;{%- endunless -%}
+          {%- endfor -%}
+          </div>
+
         {%- endif -%}
       </li>
       {%- endfor -%}
