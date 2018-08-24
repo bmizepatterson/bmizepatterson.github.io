@@ -143,3 +143,12 @@ a.post-category:hover {
 	.content {width:90%;}
 }
 @keyframes opac{from{opacity:0} to{opacity:1}}
+/** 
+ * CSS for jekyll-octicon icons
+ * See: https://github.com/primer/octicons/tree/master/lib/octicons_jekyll
+ */
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
