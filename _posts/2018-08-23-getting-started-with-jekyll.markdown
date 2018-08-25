@@ -2,7 +2,7 @@
 title: Getting Started with Jekyll
 layout: post
 date: 2018-08-23 21:09:49
-categories: Jekyll
+categories: Jekyll Ruby
 excerpt: "The three things I wish I had known before I jumped on Jekyll"
 ---
 
