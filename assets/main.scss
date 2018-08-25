@@ -131,6 +131,12 @@ a.post-category:hover {
 	background-color: #828282;
 	border-color: #828282;
 }
+.linkToTop {
+	text-align: right;
+}
+.linkToTop .octicon-triangle-up {
+	margin-left: 5px;
+}
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
 }
