@@ -37,7 +37,7 @@ header_pages:
   - index.md
   - about.md
   - portfolio.md
-permalink: pretty
+permalink: /:year/:month/:day/:title/
 
 # Defaults
 defaults:
