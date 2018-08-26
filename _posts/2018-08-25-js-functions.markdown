@@ -1,8 +1,9 @@
 ---
 title: 'Function Scope: A Meditation'
 layout: post
+date: 2018-08-26 12:24:11
 categories: JavaScript
-excerpt: ""
+excerpt: "Let's get abstract. We'll ponder the nature of the JavaScript function and think about scope. Oh, and what's a <em>koan</em>?"
 ---
 
 Recently I was working through this [JavaScript koan](https://github.com/mrdavidlaing/javascript-koans):
