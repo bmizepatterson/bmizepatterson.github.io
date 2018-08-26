@@ -137,8 +137,21 @@ a.post-category:hover {
 .linkToTop .octicon-triangle-up {
 	margin-left: 5px;
 }
-.highlight, .highlight pre {
+.highlight {
+	border: 1px solid #e8e8e8;
 	border-radius: 5px;
+}
+.highlight pre {
+	border:none;
+	margin:0;
+}
+.highlight table, .highlight th, .highlight td {
+	border:none;
+	margin:0;
+	padding:0;
+}
+.lineno {
+	color: #BBB;
 }
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
