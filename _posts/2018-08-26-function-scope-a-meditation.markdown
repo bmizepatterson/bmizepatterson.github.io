@@ -52,3 +52,4 @@ I'll let you finish the problem and evaluate the expression `mysteryFunction3(10
 ## Learn more
 - [MDN JS Function Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Function Closures](https://www.w3schools.com/js/js_function_closures.asp)&mdash;a trick that leverages scope
+- Marijn Haverbeke's chapter on [Functions](https://eloquentjavascript.net/03_functions.html) from *Eloquent Javascript* provides a much more thorough and, well, *eloquent* explanation of functions in JavaScript.
