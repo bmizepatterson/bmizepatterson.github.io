@@ -3,7 +3,7 @@ title: Iterating Arrays in Javascript
 layout: post
 date: 2018-09-18 13:03
 categories: JavaScript
-excerpt: ""
+excerpt: "A brief look at four ways to iterate through an array in JavaScript"
 ---
 
 Let's say our goal is to add together a series of numbers. We need to build a function that takes an array of numbers as input and returns the sum of those numbers as an integer. There are at least four ways to do this in JavaScript. Let's take a brief look.
