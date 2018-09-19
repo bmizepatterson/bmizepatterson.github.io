@@ -37,7 +37,7 @@ show_excerpts: true
 header_pages:
   - index.md
   - about.md
-  - portfolio.md
+  - portfolio.html
 permalink: /:year/:month/:day/:title/
 
 # Defaults
