@@ -1,7 +1,7 @@
 ---
 title: The JavaScript Regex
 layout: post
-date: 2018-09-24 15:56:45
+date: 2018-09-25 07:51:19
 categories: JavaScript
 excerpt: 'How to use Regexes in JavaScript'
 ---
@@ -36,6 +36,43 @@ let expression = /blog/i;
 MDN has a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Syntax" target="_blank">comprehensive list</a> of available flags.
 
 ## Using a regular expression in JS
+
+Defining your regular expression is one thing; using it to search and/or replace text is another. Thankfully, the JS RexExp object comes with several useful methods.
+
+### Testing for a match
+
+To test for a match, pass the string to be search into the RexExp::test() method. This method will return true if the regex matches the string, otherwise false.
+
+{%- highlight javascript -%}
+let expression = /blog/i;
+let match = expression.test('This blog is awesome!');   // Returns true
+{%- endhighlight -%}
+
+### Obtaining matched text
+
+If you need more information about a match than just *whether* it occurred, use the RexExp::exec() method. Calling exec() on a string will return `null` if no match is found. Otherwise, it will return an object with more information about the match.
+
+{%- highlight javascript -%}
+let expression = /blog/i;
+let match = expression.exec('This blog is awesome!');
+console.log(match.index);   // Prints 5, the position of the matched text
+console.log(match);         // Prints an array of matched strings
+{%- endhighlight -%}
+
+### String methods
+
+Note that the test() and exec() methods are called on the JavaScript RegExp object, and we pass in the string to be searched. Alternatively, we can call analogous methods *on the test string* and pass in a RexExp object.
+
+{%- highlight javascript -%}
+let expression = /blog/i;
+let string = 'This blog is awesome!';
+string.search(expression);      // Returns 5, the position of the matched text
+string.match(expression);       // Returns an array of matches
+
+let replaced = string.replace(expression, 'article');
+console.log(replaced);
+// Prints "This article is awesome!"
+{%- endhighlight -%}
 
 ## Regex Tools
 
