@@ -8,9 +8,9 @@ excerpt: 'How to use Regexes in JavaScript'
 
 For some, a well-formed regex is a thing of beauty; for others, it's the reason why there's a bottle of ibuprofen nearby. Regardless of which group you fall into, it's hard to deny that regular expressions are powerful tools, and any web developer would do well to become familiar (if not actually *comfortable*) with their use.
 
-The regex will take different forms depending on the context and what language you are working with. This post will consider the JavaScript implementation and provide an overview of how they work in that (other) polarizing language.
+The regex will take different forms depending on the context and what language you are working with. This post will consider the JavaScript implementation and provide an overview of how they work in that language.
 
-(This post is **not** a general introduction to regular expressions, so if you need, so if that's what you need, check out the [resources](#regex-tools) below.)
+(This post is **not** a general introduction to regular expressions, so if that's what you need, check out the [resources](#regex-tools) below.)
 
 ## Creating a regular expression in JS
 
@@ -37,7 +37,7 @@ MDN has a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## Using a regular expression in JS
 
-Defining your regular expression is one thing; using it to search and/or replace text is another. Thankfully, the JS RexExp object comes with several useful methods.
+Defining your regular expression is one thing; using it to search text is another. Thankfully, the JS RexExp object comes with several useful methods.
 
 ### Testing for a match
 
