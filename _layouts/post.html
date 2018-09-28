@@ -26,7 +26,6 @@ layout: default
 
   {%- if categories.size > 0 -%}
     <div class="post-categories">
-      <span>Categories:&nbsp;</span>
       {%- for category in categories -%}
         <a class="post-category" href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>
         {%- unless forloop.last -%}&nbsp;{%- endunless -%}
