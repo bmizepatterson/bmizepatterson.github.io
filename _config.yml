@@ -63,6 +63,9 @@ social:
     - https://www.linkedin.com/in/bmizepatterson
     - https://github.com/bmizepatterson
 
+# attributes for external links
+ext_link_rel: "rel=\"noopener noreferrer\""
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
