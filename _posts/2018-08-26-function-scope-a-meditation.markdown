@@ -1,5 +1,6 @@
 ---
-title: 'Function Scope: A Meditation'
+title: Function Scope
+subtitle: A Meditation
 layout: post
 date: 2018-08-26 12:24:11
 categories: JavaScript
