@@ -29,6 +29,9 @@ pre, code {
 	font-size: inherit;
 	background-color: #fff;
 }
+blockquote {
+	letter-spacing: unset;
+}
 .container {
 	width:100%;
 	padding:1rem 1%;
@@ -168,6 +171,16 @@ a.post-category:hover {
 }
 .archive-group article {
 	margin-left:20px;
+}
+.snippet {
+	margin: 1rem 0.5rem;
+	padding: 16px;
+	background: white;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+}
+.snippet :last-child {
+	margin-bottom: 0;
 }
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
