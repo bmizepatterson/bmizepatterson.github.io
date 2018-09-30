@@ -24,6 +24,9 @@ h1 {
 }
 p, ol, ul {
 	font-size: 1.4rem;
+	.snippet & {
+		font-size: 1.1rem;
+	}
 }
 pre, code {
 	font-size: inherit;
@@ -182,6 +185,31 @@ a.post-category:hover {
 .snippet :last-child {
 	margin-bottom: 0;
 }
+
+// Task list styling
+.task-list-item {
+	list-style-type: none;
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	span {
+		position: absolute;
+		width: 1.2rem;
+		height: 1.2rem;
+		top:6px;
+		left:0;
+		background-color:white;
+		border: 1px solid #CCC;
+		border-radius: 4px;
+	}
+	span.checked::before {
+		content: "\2713";
+		position: absolute;
+    	top: -6px;
+	}
+}
+
 @media only screen and (min-width:600px) {
 	.parallax {background-attachment: fixed;}
 }
