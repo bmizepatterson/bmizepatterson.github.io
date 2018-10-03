@@ -35,7 +35,7 @@ plugins:
   - jekyll-sitemap
 show_excerpts: true
 header_pages:
-  - index.md
+  - blog.md
   - about.md
   - portfolio.html
 permalink: /:year/:month/:day/:title/

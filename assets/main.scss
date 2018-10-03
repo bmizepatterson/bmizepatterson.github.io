@@ -2,70 +2,151 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// Colors
+$off-white:		   #efefef;
+$chalky-black:	   #232323;
+$creammy-green:	   #789591;
+$checker-blue:     #435576;
+$suit-brown:	   #36312e;
+
+// Customize minima sass variables
+$base-font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$logo-font-family: "Life Savers", Georgia, serif;
+$base-font-size:   20px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       $chalky-black;
+$background-color: $off-white;
+
+// Brand color is used for links
+$brand-color:      $suit-brown; // $creamy-green; // $checker-blue;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$table-text-align: left;
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
 @import "minima";
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,700|Life+Savers');
+// @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,700|Life+Savers');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Life+Savers&text=bp');
 
-
-html, body {
-	padding:0;
-	margin:0;
-	height:100%;
-}
 body {
 	display:initial;
-	background-color:#EEE;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
 }
-h1 {
-	font-family: 'Life Savers', Verdana, sans-serif;
-	margin-bottom:0;
-	font-size:3rem;
-}
+
 p, ol, ul {
-	font-size: 1.4rem;
 	.snippet & {
-		font-size: 1.1rem;
+		font-size: $small-font-size;
 	}
 }
-pre, code {
-	font-size: inherit;
-	background-color: #fff;
+pre {
+	@include relative-font-size(0.8);
+	background-color: $chalky-black;
+	color: $off-white;
+	code {
+		@include relative-font-size(0.8);
+	}
+}
+code {
+	border: 0;
+	background: none;
+	padding: 0 2px;
 }
 blockquote {
 	letter-spacing: unset;
 	color: unset;
 }
+main {
+	padding-top: $spacing-unit;
+}
+
+.logo {
+	font-family: $logo-font-family;
+	font-size: 100px;
+	a, a:hover {
+		color: $text-color;
+		text-decoration: none;
+	}
+}
+
+.site-nav {
+	margin-top: 75px;
+	font-size: $small-font-size;
+}
+
 .container {
-	width:100%;
-	padding:1rem 1%;
-	box-shadow: inset 0px -10px 20px -7px #333, inset 0px 10px 20px -7px #333;
+    max-width: 720px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.container:before, .container:after {
-	content:"";
-	display:table;
-	clear:both;
-}
-.third,.twothirds {
-	float:left;
-	width:100%;
-	padding:0 1%;
-}
-.content {
-	margin-right: 20%;
-}
+
 .parallax {
 	background-image:url({{ "/assets/img/ben1500.jpg" | relative_url }});
-	background-attachment: scroll;
+	// scroll is the default...
+	// background-attachment: scroll;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	box-shadow: inset 0px -10px 20px -7px #333, inset 0px 10px 20px -7px #333;
+
+	&.jumbotron {
+		height: 300px;
+		background-position: 0% 40%;
+	}
 }
-.parallax.top {
-	height:10%;
+
+@include media-query($on-laptop) {
+
 }
-.parallax.bottom {
-	height:100%;
+@include media-query($on-palm) {
+	.parallax.jumbotron {
+		height: 500px
+	}
+	.site-nav {
+		border: none;
+		margin-top: 0;
+	}
+}
+
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+  text-decoration: underline;
+
+  &:visited {
+    color: $brand-color; //darken($brand-color, 15%);
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+
+
+.content {
+	margin-right: 20%;
 }
 .portfolio-list dt {
 	font-size: 1.5rem;
@@ -78,9 +159,6 @@ blockquote {
 	color:#777;
 	font-size:0.9rem;
 	margin-bottom:1rem;
-}
-.site-header {
-	border:none;
 }
 .social-media-list {
 	font-size: 0.9rem;
@@ -111,10 +189,6 @@ blockquote {
 .rss-subscribe {
 	font-size: 0.9rem;
     color: #777;
-}
-.post-title {
-	letter-spacing: initial;
-	line-height: initial;
 }
 .post-content h2 {
 	line-height: 1.3;
@@ -211,18 +285,6 @@ a.post-category:hover {
 	}
 }
 
-@media only screen and (min-width:600px) {
-	.parallax {background-attachment: fixed;}
-}
-@media only screen and (min-width:769px) {
-	.third {width:31%;}
-	.twothirds {width:64%;};
-}
-@media only screen and (max-width:600px) {
-	.mobile-hide {display:none;}
-	.content {width:90%;}
-}
-@keyframes opac{from{opacity:0} to{opacity:1}}
 /**
  * CSS for jekyll-octicon icons
  * See: https://github.com/primer/octicons/tree/master/lib/octicons_jekyll

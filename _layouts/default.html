@@ -5,20 +5,13 @@
 
   <body id="doc-top">
 
-    <div class="parallax top"></div>
+    {%- include header.html -%}
+
     <div class="container">
-      {%- include left_third.html -%}
 
-      <main class="twothirds" aria-label="Content">
+      {{ content }}
 
-        {%- include header.html -%}
-        
-        <div class="content">
-          {{ content }}
-        </div>
-      </main>
     </div>
-    <div class="parallax bottom"></div>
 
   </body>
 
