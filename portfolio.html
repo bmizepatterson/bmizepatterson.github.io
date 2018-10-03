@@ -4,10 +4,11 @@ title: Portfolio
 ---
 
 {%- if site.projects.size > 0 -%}
+{%- assign projects = site.projects | sort: 'date' | reverse -%}
 
     <div class="portfolio-list">
 
-        {%- for project in site.projects -%}
+        {%- for project in projects -%}
             <div class="card">
                 {%- if project.image -%}
                     <div class="card-image-top" style="background-image:url('{{ project.image | relative_url }}');">
@@ -28,8 +29,8 @@ title: Portfolio
                     {%- endif -%}
                 </div>
                 <div class="card-footer">
-                    {%- if project.publish_date -%}
-                        <span class="project-date">Posted {{ project.publish_date }}</span>
+                    {%- if project.date -%}
+                        <span class="project-date">Posted {{ project.date | date_to_string }}</span>
                     {%- endif -%}
                     <p class="project-repo-link"><a href="{{ project.repo_link }}">View on GitHub</a></p>
 
