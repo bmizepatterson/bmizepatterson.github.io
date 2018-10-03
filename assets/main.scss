@@ -19,6 +19,7 @@ $small-font-size:  $base-font-size * 0.8;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
+$min-width:		   250px;	// Absolute minimum width of the site
 
 $text-color:       $chalky-black;
 $background-color: $off-white;
@@ -106,22 +107,18 @@ main {
 	}
 }
 
-.site-nav {
-	margin-top: 75px;
-	font-size: $small-font-size;
+.site-header {
+	min-width: $min-width;
 
-	@include media-query($on-palm) {
-		border: none;
-		margin-top: 0;
+	.site-nav {
+		margin-top: 75px;
+		font-size: $small-font-size;
+
+		@include media-query($on-palm) {
+			border: none;
+			margin-top: 0;
+		}
 	}
-}
-
-.container {
-    max-width: 720px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 
@@ -167,17 +164,63 @@ main {
 	}
 }
 
-
 /**
- * PORTFOLIO
+ * PORTFOLIO LIST
  */
 .portfolio-list {
-	dt {
-		font-size: 1.5rem;
-	    font-weight: bold;
+	margin-bottom: $spacing-unit;
+	.project-repo-link {
+		text-align: right;
+		margin: 0;
+		a {
+			color: $off-white;
+		}
 	}
-	dd {
-    	margin-bottom:1rem;
+	.project-date {
+		float: left;
+		color: $off-white;
+	}
+}
+
+/**
+ * CARDS
+ */
+.card {
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid $chalky-black;
+    border-radius: 0.25rem;
+    background-color: $white;
+    margin-bottom: $spacing-unit;
+	font-size: $small-font-size;
+
+    .card-image-top {
+	    width: 100%;
+	    border-top-left-radius: calc(0.25rem - 1px);
+	    border-top-right-radius: calc(0.25rem - 1px);
+	    height: 200px;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+
+    .card-body {
+    	flex: 1 1 auto;
+    	padding: $spacing-unit;
+
+    	&:last-child {
+    		margin-bottom: 0;
+    	}
+    }
+
+    .card-footer {
+    	text-align: center;
+    	background-color: $creamy-green;
+    	color: $off-white;
+    	padding: 0 $spacing-unit/2;
     }
 }
 

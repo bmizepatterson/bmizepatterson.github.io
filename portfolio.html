@@ -5,15 +5,29 @@ title: Portfolio
 
 {%- if site.projects.size > 0 -%}
 
-    <dl class="portfolio-list">
+    <div class="portfolio-list">
 
         {%- for project in site.projects -%}
+            <div class="card">
+                {%- if project.image -%}
+                    <div class="card-image-top" style="background-image:url('{{ project.image | relative_url }}');">
 
-            <dt><a href="{{ project.site_link }}">{{ project.name }}</a></dt>
-            <dd>{{ project.description }} (<a href="{{ project.repo_link }}">repo on GitHub</a>)</dd>
+                    </div>
+                {%- endif -%}
+                <div class="card-body">
+                    <h2><a href="{{ project.site_link }}">{{ project.name }}</a></h2>
+                    <p>{{ project.description }}</p>
+                </div>
+                <div class="card-footer">
+                    {%- if project.publish_date -%}
+                        <span class="project-date">Completed {{ project.publish_date }}</span>
+                    {%- endif -%}
+                    <p class="project-repo-link"><a href="{{ project.repo_link }}">View on GitHub</a></p>
 
+                </div>
+            </div>
         {%- endfor -%}
 
-    </dl>
+    </div>
 
 {%- endif -%}
