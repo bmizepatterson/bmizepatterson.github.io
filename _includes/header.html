@@ -2,7 +2,7 @@
 
     <div class="wrapper">
 
-        <span class="logo"><a href="{{ "index.html" || relative_url }}">bp</a></span>
+        <span id="logo"><a href="{{ "index.html" || relative_url }}">bp</a></span>
 
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
