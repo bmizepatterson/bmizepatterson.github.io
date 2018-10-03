@@ -17,10 +17,19 @@ title: Portfolio
                 <div class="card-body">
                     <h2><a href="{{ project.site_link }}">{{ project.name }}</a></h2>
                     <p>{{ project.description }}</p>
+
+                    {%- if project.highlights -%}
+                        <p>Highlights:</p>
+                        <ul>
+                            {%- for item in project.highlights -%}
+                                <li>{{ item }}</li>
+                            {%- endfor -%}
+                        </ul>
+                    {%- endif -%}
                 </div>
                 <div class="card-footer">
                     {%- if project.publish_date -%}
-                        <span class="project-date">Completed {{ project.publish_date }}</span>
+                        <span class="project-date">Posted {{ project.publish_date }}</span>
                     {%- endif -%}
                     <p class="project-repo-link"><a href="{{ project.repo_link }}">View on GitHub</a></p>
 
