@@ -3,18 +3,17 @@ layout: page
 title: Portfolio
 ---
 
-<dl class="portfolio-list">
+{%- if site.projects.size > 0 -%}
 
-    <dt><a href="https://bmizepatterson.github.io/mesh/">Mesh</a></dt>
-    <dd>A graphical neuronal network simulator</dd>
+    <dl class="portfolio-list">
 
-    <dt><a href="https://bmizepatterson.github.io/ca-maker/">Cellular Automaton Maker</a></dt>
-    <dd>A cellular automaton simulator created using Processing (JS)</dd>
+        {%- for project in site.projects -%}
 
-    <dt><a href="https://bmizepatterson.github.io/js-calculator/">JavaScript Calculator</a></dt>
-    <dd>A simple JavaScript calculator</dd>
+            <dt><a href="{{ project.site_link }}">{{ project.name }}</a></dt>
+            <dd>{{ project.description }} (<a href="{{ project.repo_link }}">repo on GitHub</a>)</dd>
 
-    <dt><a href="https://tic-tac-toe-bp.herokuapp.com/.">Tic-Tac-Toe</a></dt>
-    <dd>Two-player tic-tac-toe game (<a href="https://github.com/bmizepatterson/tic-tac-toe">repo on GitHub</a>)</dd>
+        {%- endfor -%}
 
-</dl>
+    </dl>
+
+{%- endif -%}

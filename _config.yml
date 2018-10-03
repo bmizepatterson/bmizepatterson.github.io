@@ -48,6 +48,10 @@ defaults:
       lang: en-US
       author: Ben Patterson
 
+# Define collections
+collections:
+  - projects
+
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
