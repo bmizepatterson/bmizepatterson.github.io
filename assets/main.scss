@@ -58,8 +58,7 @@ p, ol, ul {
 }
 pre {
 	@include relative-font-size(0.8);
-	background-color: $chalky-black;
-	color: $off-white;
+	background-color: inherit;
 	code {
 		@include relative-font-size(0.8);
 	}
@@ -68,10 +67,14 @@ code {
 	border: 0;
 	background: none;
 	padding: 0 2px;
+	font-weight: bold;
 }
-blockquote {
+blockquote, {
 	letter-spacing: unset;
 	color: unset;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 main {
 	padding-top: $spacing-unit;
@@ -121,6 +124,27 @@ main {
     margin-left: auto;
 }
 
+
+/**
+ * FOOTNOTES
+ */
+.footnote {
+	font-size: 0.9rem;
+}
+.footnotes {
+	margin-top: 2rem;
+	border-top: 1px solid #CCC;
+
+	ol, li, p {
+		font-size:0.9rem;
+		color: #777;
+	}
+}
+
+
+/**
+ * PARALLAX
+ */
 .parallax {
 	background-image:url({{ "/assets/img/ben1500.jpg" | relative_url }});
 	// scroll is the default...
@@ -143,6 +167,10 @@ main {
 	}
 }
 
+
+/**
+ * PORTFOLIO
+ */
 .portfolio-list {
 	dt {
 		font-size: 1.5rem;
@@ -153,18 +181,7 @@ main {
     }
 }
 
-.footnote {
-	font-size: 0.9rem;
-}
-.footnotes {
-	margin-top: 2rem;
-	border-top: 1px solid #CCC;
 
-	ol, li, p {
-		font-size:0.9rem;
-		color: #777;
-	}
-}
 
 /**
  * POST LISTS
@@ -230,9 +247,17 @@ a.reversefootnote {
 		}
 		.post-meta {
 			margin-bottom: 0;
+			margin-left: 1px;
 		}
 	}
 	.post-content {
+		p {
+			margin-bottom: $spacing-unit;
+			line-height: 1.6;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
 		h2 {
 			line-height: 1.3;
 		    margin-top: $spacing-unit * 2;
@@ -248,45 +273,55 @@ a.reversefootnote {
 	}
 }
 
-
-
+/**
+ * SYNTAX HIGHLIGHTING
+ */
 .highlight {
 	border: 1px solid #e8e8e8;
 	border-radius: 5px;
+	margin-bottom: $spacing-unit;
+	pre {
+		border:none;
+		margin:0;
+	}
+	table, th, td {
+		border:none;
+		margin:0;
+		padding:0;
+	}
+	.gutter {
+		width:3em;
+	}
+	.lineno {
+		color: #BBB;
+	}
 }
-.highlight pre {
-	border:none;
-	margin:0;
-}
-.highlight table, .highlight th, .highlight td {
-	border:none;
-	margin:0;
-	padding:0;
-}
-.gutter {
-	width:3em;
-}
-.lineno {
-	color: #BBB;
-}
+
+/**
+ * CATEGORY PAGE
+ */
 .archive-group .category-head {
 	margin-top:2rem;
 }
 .archive-group article {
 	margin-left:20px;
 }
+
+/**
+ * SNIPPET
+ */
 .snippet {
-	margin: 1rem 0.5rem;
+	margin: $spacing-unit 0;
 	padding: 16px;
-	background: white;
+	background: $white;
 	border: 1px solid #CCC;
 	border-radius: 4px;
 }
-.snippet :last-child {
-	margin-bottom: 0;
-}
 
-// Task list styling
+
+/**
+ * TASK ITEM LISTS
+ */
 .task-list-item {
 	list-style-type: none;
 	display: block;
