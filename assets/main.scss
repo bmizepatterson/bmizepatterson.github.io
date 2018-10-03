@@ -15,7 +15,7 @@ $base-font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", R
 $logo-font-family: "Life Savers", Georgia, serif;
 $base-font-size:   20px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  $base-font-size * 0.8;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
@@ -48,7 +48,9 @@ html {
 body {
 	display:initial;
 }
-
+h1 {
+	margin-bottom: 0;
+}
 p, ol, ul {
 	.snippet & {
 		font-size: $small-font-size;
@@ -73,6 +75,23 @@ blockquote {
 }
 main {
 	padding-top: $spacing-unit;
+}
+
+.tagline {
+	color: $grey-color;
+	font-size: $small-font-size;
+}
+.social-media-list {
+	margin-bottom: $spacing-unit;
+	svg {
+		transition: 0.2s;
+	}
+	a {
+		margin-right: 4px;
+	}
+	a:hover svg {
+		transform: scale(1.25,1.25);
+	}
 }
 
 #logo {
@@ -173,22 +192,8 @@ a.reversefootnote {
 .portfolio-list dd {
     margin-bottom:1rem;
 }
-.tagline {
-	color:#777;
-	font-size:0.9rem;
-	margin-bottom:1rem;
-}
-.social-media-list {
-	font-size: 0.9rem;
-	line-height: initial;
-	margin-bottom:2rem;
-}
-.social-media-list svg {
-	transition: 0.2s;
-}
-.social-media-list li:hover svg {
-	transform: scale(1.25,1.25);
-}
+
+
 .footnote {
 	font-size: 0.9rem;
 }
