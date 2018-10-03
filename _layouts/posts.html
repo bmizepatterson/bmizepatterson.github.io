@@ -2,48 +2,50 @@
 layout: default
 ---
 
-<div class="home">
+<main class="wrapper">
 
-  {{ content }}
+    {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- if site.posts.size > 0 -%}
+
+        {%- if page.list_title -%}
+            <h2 class="post-list-heading">{{ page.list_title }}</h2>
+        {%- endif -%}
+
+        <ul class="post-list">
+            {%- for post in site.posts -%}
+            <li>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="post-meta">{{ post.date | date: date_format }}</span>
+                <h3>
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                        {%- if post.subtitle -%}
+                        : {{ post.subtitle }}
+                        {%- endif -%}
+                    </a>
+                </h3>
+
+                {%- if site.show_excerpts -%}
+                    <div class="post-excerpt">
+                        {{ post.excerpt }}
+                    </div>
+                {%- endif -%}
+
+                {%- if post.categories.size > 0 -%}
+                    <div class="post-categories">
+                        {%- for category in post.categories -%}
+                        <a class="post-category" href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>
+                        {%- unless forloop.last -%}&nbsp;{%- endunless -%}
+                        {%- endfor -%}
+                    </div>
+                {%- endif -%}
+
+            </li>
+            {%- endfor -%}
+        </ul>
+
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
     {%- endif -%}
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-            {%- if post.subtitle -%}
-            : {{ post.subtitle }}
-            {%- endif -%}
-          </a>
-        </h3>
-
-        {%- if site.show_excerpts -%}
-        <div class="post-excerpt">
-          {{ post.excerpt }}
-        </div>
-        {%- endif -%}
-
-        {%- if post.categories.size > 0 -%}
-          <div class="post-categories">
-          {%- for category in post.categories -%}
-            <a class="post-category" href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>
-            {%- unless forloop.last -%}&nbsp;{%- endunless -%}
-          {%- endfor -%}
-          </div>
-
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
 
 </div>
