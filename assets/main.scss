@@ -43,6 +43,9 @@ $on-laptop:        800px;
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Life+Savers&text=bp');
 
+html {
+	height: 100%;	// needed to make parallax class work
+}
 body {
 	display:initial;
 }
@@ -107,6 +110,10 @@ main {
 	&.jumbotron {
 		height: 300px;
 		background-position: 0% 40%;
+	}
+	&.bottom {
+		height: 100%;
+		background-attachment: fixed;
 	}
 }
 
