@@ -39,7 +39,6 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 @import "minima";
-// @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,700|Life+Savers');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Life+Savers&text=bp');
 
@@ -156,6 +155,9 @@ a.post-category:visited {
 }
 a.post-category:hover {
 	background-color: $grey-color-dark;
+}
+a.reversefootnote {
+	text-decoration: none;
 }
 
 
