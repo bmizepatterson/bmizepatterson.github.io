@@ -135,6 +135,42 @@ main {
 	}
 }
 
+.portfolio-list {
+	dt {
+		font-size: 1.5rem;
+	    font-weight: bold;
+	}
+	dd {
+    	margin-bottom:1rem;
+    }
+}
+
+.footnote {
+	font-size: 0.9rem;
+}
+.footnotes {
+	margin-top: 2rem;
+	border-top: 1px solid #CCC;
+
+	ol, li, p {
+		font-size:0.9rem;
+		color: #777;
+	}
+}
+
+.post-list {
+	& > li,
+	p {
+	    font-size: initial;
+	    line-height: initial;
+	}
+	~ .rss-subscribe {
+		font-size: $small-font-size;
+	}
+}
+
+
+
 @include media-query($on-laptop) {
 
 }
@@ -161,7 +197,6 @@ a,
 		color: darken($brand-color, 25%);
 	}
 }
-
 a.post-category,
 a.post-category:visited {
 	// font-size: $small-font-size;
@@ -181,38 +216,6 @@ a.reversefootnote {
 
 
 
-
-.content {
-	margin-right: 20%;
-}
-.portfolio-list dt {
-	font-size: 1.5rem;
-    font-weight: bold;
-}
-.portfolio-list dd {
-    margin-bottom:1rem;
-}
-
-
-.footnote {
-	font-size: 0.9rem;
-}
-.footnotes {
-	margin-top: 2rem;
-	border-top: 1px solid #CCC;
-}
-.footnotes ol, .footnotes li, .footnotes p {
-	font-size:0.9rem;
-	color: #777;
-}
-.post-list > li, .post-list p {
-    font-size: initial;
-    line-height: initial;
-}
-.rss-subscribe {
-	font-size: 0.9rem;
-    color: #777;
-}
 .post-content h2 {
 	line-height: 1.3;
     margin-top: 2rem;
