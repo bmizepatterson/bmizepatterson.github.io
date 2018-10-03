@@ -11,22 +11,23 @@ title: Portfolio
         {%- for project in projects -%}
             <div class="card">
                 {%- if project.image -%}
-                    <div class="card-image-top" style="background-image:url('{{ project.image | relative_url }}');">
-
-                    </div>
-                {%- endif -%}
+                <div class="card-body" style="background-image:url('{{ project.image | relative_url }}');">
+                {%- else -%}
                 <div class="card-body">
-                    <h2><a href="{{ project.site_link }}">{{ project.name }}</a></h2>
-                    <p>{{ project.description }}</p>
+                {%- endif -%}
+                    <div class="card-text">
+                        <h2><a href="{{ project.site_link }}">{{ project.name }}</a></h2>
+                        <p>{{ project.description }}</p>
 
-                    {%- if project.highlights -%}
-                        <p>Highlights:</p>
-                        <ul>
-                            {%- for item in project.highlights -%}
-                                <li>{{ item }}</li>
-                            {%- endfor -%}
-                        </ul>
-                    {%- endif -%}
+                        {%- if project.highlights -%}
+                            <p>Highlights:</p>
+                            <ul>
+                                {%- for item in project.highlights -%}
+                                    <li>{{ item }}</li>
+                                {%- endfor -%}
+                            </ul>
+                        {%- endif -%}
+                    </div>
                 </div>
                 <div class="card-footer">
                     {%- if project.date -%}

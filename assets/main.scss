@@ -16,6 +16,7 @@ $logo-font-family: "Life Savers", Georgia, serif;
 $base-font-size:   20px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.8;
+$tiny-font-size:   14px;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
@@ -99,6 +100,9 @@ main {
 	}
 }
 
+/**
+ * SITE HEADER
+ */
 #logo {
 	font-family: $logo-font-family;
 	font-size: 100px;
@@ -172,13 +176,16 @@ main {
  */
 .portfolio-list {
 	margin-bottom: $spacing-unit;
+
 	.project-repo-link {
 		text-align: right;
 		margin: 0;
-		a {
+
+		a, a:visited {
 			color: $off-white;
 		}
 	}
+
 	.project-date {
 		float: left;
 		color: $off-white;
@@ -189,41 +196,32 @@ main {
  * CARDS
  */
 .card {
-	position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-clip: border-box;
     border: 1px solid $chalky-black;
-    border-radius: 0.25rem;
-    background-color: $white;
     margin-bottom: $spacing-unit;
 	font-size: $small-font-size;
-
-    .card-image-top {
-	    width: 100%;
-	    border-top-left-radius: calc(0.25rem - 1px);
-	    border-top-right-radius: calc(0.25rem - 1px);
-	    height: 200px;
-	    background-repeat: no-repeat;
-	    background-position: center;
-	}
+	// If you ever set border-radius, but sure to set overflow: hidden;
+	// otherwise the background-images will leak out.
+	// overflow: hidden;
 
     .card-body {
-    	flex: 1 1 auto;
-    	padding: $spacing-unit;
+	    background-repeat: no-repeat;
+	    background-position: center;
 
-    	&:last-child {
-    		margin-bottom: 0;
+    	.card-text {
+    		padding: $spacing-unit;
+    		background-color: rgba(255,255,255,0.95);
+
+	    	&:last-child {
+	    		margin-bottom: 0;
+	    	}
     	}
     }
 
     .card-footer {
-    	text-align: center;
     	background-color: $creamy-green;
     	color: $off-white;
-    	padding: 0 $spacing-unit/2;
+    	padding: 2px $spacing-unit/2;
+    	font-size: $tiny-font-size;
     }
 }
 
