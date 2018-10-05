@@ -1,11 +1,11 @@
 ---
 title: Unit Testing with Mocha
 layout: post
-date: 2018-10-05
+date: 2018-10-05 18:53:29
 categories:
     - JavaScript
     - Problem Solving
-excerpt: ''
+excerpt: 'It's a great feeling to have built something. It's an even better feeling to be confident that the thing you built does what it's supposed to do. How can we gain this confidence?'
 ---
 
 Let's say you've just written the World's Greatest App&trade;. It's a calculator, and it's beautiful. It has tons of cool features. It does the <a href="https://en.wikipedia.org/wiki/New_Math" target="_blank" {{ site.ext_link_rel }}>new math</a>. You've poured your heart and soul into it. Plus an arm and a leg. Not to mention a few hours. It's a great feeling to have built something. It's an even better feeling to be confident that the thing you built does what it's supposed to do. You tested it on your machine for a few minutes, but something nags at you that you're forgetting something. What if a user clicks the wrong thing at the wrong time and it breaks? And how do you know that all the pieces of it will work properly together in every situation?
