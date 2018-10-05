@@ -8,4 +8,5 @@ image: assets/img/js-calculator.png
 highlights:
     - JavaScript event listeners
     - Application logic
+    - Unit testing with the Mocha test suite
 ---
