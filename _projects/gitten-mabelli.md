@@ -6,8 +6,8 @@ site_link: https://gitten-mabelli.herokuapp.com/
 image: assets/img/gitten-mabelli.jpg
 date: 2018-10-05
 highlights:
-    - API request handling
+    - API requests in plain JavaScript
     - Bootstrap CSS framework
     - Sass CSS preprocessing
-    - Google maps integration
+    - Google Maps API
 ---
