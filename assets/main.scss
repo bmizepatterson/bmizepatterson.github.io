@@ -184,6 +184,10 @@ main {
 	&.bottom {
 		height: 100%;
 		background-attachment: fixed;
+		// Fix for small screens
+		@include media-query($on-palm) {
+			background-attachment: scroll;
+		}
 	}
 }
 
