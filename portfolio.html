@@ -9,34 +9,36 @@ title: Portfolio
     <div class="portfolio-list">
 
         {%- for project in projects -%}
-            <div class="card">
-                {%- if project.image -%}
-                <div class="card-body" style="background-image:url('{{ project.image | relative_url }}');">
-                {%- else -%}
-                <div class="card-body">
-                {%- endif -%}
-                    <div class="card-text">
-                        <h2><a href="{{ project.site_link }}">{{ project.name }}</a></h2>
-                        <p>{{ project.description }}</p>
+            {%- if project.display -%}
+                <div class="card">
+                    {%- if project.image -%}
+                    <div class="card-body" style="background-image:url('{{ project.image | relative_url }}');">
+                    {%- else -%}
+                    <div class="card-body">
+                    {%- endif -%}
+                        <div class="card-text">
+                            <h2><a href="{{ project.site_link }}">{{ project.name }}</a></h2>
+                            <p>{{ project.description }}</p>
 
-                        {%- if project.highlights -%}
-                            <p>Highlights:</p>
-                            <ul>
-                                {%- for item in project.highlights -%}
-                                    <li>{{ item }}</li>
-                                {%- endfor -%}
-                            </ul>
+                            {%- if project.highlights -%}
+                                <p>Highlights:</p>
+                                <ul>
+                                    {%- for item in project.highlights -%}
+                                        <li>{{ item }}</li>
+                                    {%- endfor -%}
+                                </ul>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        {%- if project.date -%}
+                            <span class="project-date">Posted {{ project.date | date_to_string }}</span>
                         {%- endif -%}
+                        <p class="project-repo-link"><a href="{{ project.repo_link }}">View on GitHub</a></p>
+
                     </div>
                 </div>
-                <div class="card-footer">
-                    {%- if project.date -%}
-                        <span class="project-date">Posted {{ project.date | date_to_string }}</span>
-                    {%- endif -%}
-                    <p class="project-repo-link"><a href="{{ project.repo_link }}">View on GitHub</a></p>
-
-                </div>
-            </div>
+            {%- endif -%}
         {%- endfor -%}
 
     </div>

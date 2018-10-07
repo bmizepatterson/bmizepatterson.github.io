@@ -47,10 +47,17 @@ defaults:
     values:
       lang: en-US
       author: Ben Patterson
+  - scope:
+      path: ""
+      type: projects
+    values:
+      display: true
+
 
 # Define collections
 collections:
   - projects
+
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
