@@ -133,6 +133,7 @@ main {
 		}
 
 		@include media-query($on-palm) {
+			background: none;
 			border: none;
 			margin-top: 0;
 		}
