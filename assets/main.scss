@@ -165,6 +165,9 @@ main {
 	background-image:url({{ "/assets/img/ben1500.jpg" | relative_url }});
 	background-position: center;
 	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 	box-shadow: inset 0px -10px 20px -7px #333, inset 0px 10px 20px -7px #333;;
 
