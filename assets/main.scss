@@ -216,21 +216,30 @@ main {
  * CARDS
  */
 .card {
-    border: 1px solid $chalky-black;
+    border: 2px solid $suit-brown;
     margin-bottom: $spacing-unit;
 	font-size: $small-font-size;
 	// If you ever set border-radius, but sure to set overflow: hidden;
 	// otherwise the background-images will leak out.
 	// overflow: hidden;
 
-    .card-body {
+	.card-img-header {
 	    background-repeat: no-repeat;
 	    background-position: center;
+		height: 300px;
+		border-bottom: 2px solid $suit-brown;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+    .card-body {
+	    border-bottom: 2px solid $suit-brown;
 
     	.card-text {
     		padding: $spacing-unit;
-    		background-color: rgba(255,255,255,0.95);
-
 	    	&:last-child {
 	    		margin-bottom: 0;
 	    	}
