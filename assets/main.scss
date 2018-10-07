@@ -27,6 +27,7 @@ $background-color: $off-white;
 
 // Brand color is used for links
 $brand-color:      $checker-blue;
+$link-hover-color: $suit-brown;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -107,7 +108,7 @@ main {
 	font-family: $logo-font-family;
 	font-size: 100px;
 	a, a:hover {
-		color: $text-color;
+		color: $off-white;
 		text-decoration: none;
 	}
 }
@@ -116,10 +117,20 @@ main {
 	min-width: $min-width;
 	border-bottom: $thick-border;
 	border-top: $thick-border;
+	background-color: $suit-brown;
+	color: $off-white;
 
 	.site-nav {
 		margin-top: 75px;
 		font-size: $small-font-size;
+		.page-link,
+		.page-link:visited {
+			color: $off-white;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 
 		@include media-query($on-palm) {
 			border: none;
@@ -254,7 +265,7 @@ a,
 		color: $brand-color;
 	}
 	&:hover {
-		color: darken($brand-color, 25%);
+		color: $link-hover-color;
 	}
 }
 a.post-category,
