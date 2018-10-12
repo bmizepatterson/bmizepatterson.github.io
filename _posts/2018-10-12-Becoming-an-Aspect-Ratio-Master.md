@@ -1,5 +1,5 @@
 ---
-title: Preserving an image's aspect ratio the easy way
+title: Preserving an image's aspect ratio—the easy way
 layout: post
 date: 2018-10-12 13:23:52
 categories:
