@@ -1,46 +1,36 @@
 ---
-layout: page
+layout: default
 title: Portfolio
 ---
+
+<main class="wrapper" id="root">
 
 {%- if site.projects.size > 0 -%}
 {%- assign projects = site.projects | sort: 'date' | reverse -%}
 
-    <div class="portfolio-list">
+<project-list>
+    {%- for project in projects -%}
+        {%- if project.display -%}
 
-        {%- for project in projects -%}
-            {%- if project.display -%}
-                <div class="card">
-                    {%- if project.image -%}
-                    <div class="card-img-header" style="background-image:url('{{ project.image | relative_url }}');"><a href="{{ project.site_link }}" target="_blank"></a></div>
-                    {%- else -%}
-                    {%- endif -%}
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h2><a href="{{ project.site_link }}" target="_blank">{{ project.name }}</a></h2>
-                            <p>{{ project.description }}</p>
+            <project-card
+                name="{{ project.name }}"
+                description="{{ project.description }}"
+                image-url="{{ project.image | relative_url }}"
+                site-url="{{ project.site_link }}"
+                repo-url="{{ project.repo_link }}"
+                highlights="{{ project.highlights }}"
+                date="{{ project.date | date_to_string }}"
+            ></project-card>
 
-                            {%- if project.highlights -%}
-                                <p>Highlights:</p>
-                                <ul>
-                                    {%- for item in project.highlights -%}
-                                        <li>{{ item }}</li>
-                                    {%- endfor -%}
-                                </ul>
-                            {%- endif -%}
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        {%- if project.date -%}
-                            <span class="project-date">Posted {{ project.date | date_to_string }}</span>
-                        {%- endif -%}
-                        <p class="project-repo-link"><a href="{{ project.repo_link }}" target="_blank">View on GitHub</a></p>
+        {%- endif -%}
+    {%- endfor -%}
 
-                    </div>
-                </div>
-            {%- endif -%}
-        {%- endfor -%}
-
-    </div>
+</project-list>
 
 {%- endif -%}
+
+</main>
+<div class="parallax bottom"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="{{ '/assets/js/projects.js' | relative_url }}"></script>
