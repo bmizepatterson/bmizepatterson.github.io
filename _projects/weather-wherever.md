@@ -5,5 +5,7 @@ date: 2018-10-04
 repo_link: https://github.com/bmizepatterson/js-weather
 site_link: https://bmizepatterson.github.io/js-weather/
 image: assets/img/weather-wherever.jpg
-highlights: API requests in vanilla JavaScript,Google Maps API
+highlights: 
+    - API requests in vanilla JavaScript
+    - Google Maps API
 ---

@@ -13,14 +13,27 @@ title: Portfolio
         {%- if project.display -%}
 
             <project-card
-                name="{{ project.name }}"
-                description="{{ project.description }}"
                 image-url="{{ project.image | relative_url }}"
                 site-url="{{ project.site_link }}"
                 repo-url="{{ project.repo_link }}"
-                highlights="{{ project.highlights }}"
-                date="{{ project.date | date_to_string }}"
-            ></project-card>
+            >
+
+                <template slot="title">{{ project.name }}</template>
+
+                <template slot="description">{{ project.description }}</template>
+
+                <template slot="highlights">
+                    <highlight-list>
+                        {%- for highlight in project.highlights -%}
+                            <highlight>{{ highlight }}</highlight>
+                        {%- endfor -%}
+                    </highlight-list>
+
+                </template>
+
+                <template slot="date">{{ project.date | date_to_string }}</template>
+
+            </project-card>
 
         {%- endif -%}
     {%- endfor -%}

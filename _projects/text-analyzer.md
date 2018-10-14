@@ -5,5 +5,8 @@ repo_link: https://github.com/bmizepatterson/text-analyzer
 site_link: https://bmizepatterson.github.io/text-analyzer/
 image: assets/img/text-editor.jpg
 date: 2018-10-09
-highlights: Vue.js framework,Regular Expressions,Graph display
+highlights: 
+    - Vue.js framework
+    - Regular Expressions
+    - Graph display
 ---
