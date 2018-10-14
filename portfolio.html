@@ -3,33 +3,40 @@ layout: default
 title: Portfolio
 ---
 
-<main class="wrapper" id="root">
+<main class="wrapper">
 
 {%- if site.projects.size > 0 -%}
 {%- assign projects = site.projects | sort: 'date' | reverse -%}
+<project-nav>
+    {%- for project in projects -%}
+        {%- if project.display -%}
+            <project-nav-item :project="{{ forloop.index }}">{{ project.name }}</project-nav-item>
+        {%- endif -%}
+    {%- endfor -%}
+</project-nav>
 
-<project-list>
+<project-collection>
+
     {%- for project in projects -%}
         {%- if project.display -%}
 
             <project-card
+                :id="{{ forloop.index }}"
                 image-url="{{ project.image | relative_url }}"
                 site-url="{{ project.site_link }}"
-                repo-url="{{ project.repo_link }}"
-            >
+                repo-url="{{ project.repo_link }}">
 
                 <template slot="title">{{ project.name }}</template>
 
                 <template slot="description">{{ project.description }}</template>
 
-                <template slot="highlights">
-                    <highlight-list>
-                        {%- for highlight in project.highlights -%}
-                            <highlight>{{ highlight }}</highlight>
-                        {%- endfor -%}
-                    </highlight-list>
+                <highlight-list slot="highlights">
 
-                </template>
+                    {%- for highlight in project.highlights -%}
+                        <highlight>{{ highlight }}</highlight>
+                    {%- endfor -%}
+
+                </highlight-list>
 
                 <template slot="date">{{ project.date | date_to_string }}</template>
 
@@ -38,7 +45,7 @@ title: Portfolio
         {%- endif -%}
     {%- endfor -%}
 
-</project-list>
+</project-collection>
 
 {%- endif -%}
 
