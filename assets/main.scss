@@ -115,10 +115,8 @@ main {
 
 .site-header {
 	min-width: $min-width;
-	border-bottom: $thick-border;
-	border-top: $thick-border;
-	background-color: $suit-brown;
 	color: $off-white;
+	border: none;
 
 	.site-nav {
 		margin-top: 75px;
@@ -163,24 +161,21 @@ main {
  * PARALLAX
  */
 .parallax {
-	background-image:url({{ "/assets/img/ben1500.jpg" | relative_url }});
-	background-position: center;
+	background-image: radial-gradient(transparent, rgba(0,0,0,0.4)), url({{ "/assets/img/ben1500.jpg" | relative_url }});
+	background-position: 0 40%;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	box-shadow: inset 0px -10px 20px -7px #333, inset 0px 10px 20px -7px #333;;
+	background-attachment: fixed;
 
 	&.jumbotron {
-		height: 300px;
-		background-position: 0% 40%;
-		border-bottom: $thick-border;
-		box-shadow: none;
-		@include media-query($on-palm) {
-			height: 500px
-		}
+		height: 100%;
 	}
+
+
+
 	&.bottom {
 		height: 100%;
 		background-attachment: fixed;

@@ -2,33 +2,35 @@
 layout: default
 ---
 
-<div class="parallax jumbotron"></div>
+<div class="parallax jumbotron">
 
-<main class="wrapper">
+    {%- include header.html -%}
 
-    {{ content }}
-
-    {%- if site.posts.size > 0 -%}
-
-        {%- assign post = site.posts.first -%}
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <h1 class="post-title">
-            <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-                {%- if post.subtitle -%}
-                : {{ post.subtitle }}
-                {%- endif -%}
-            </a>
-        </h1>
-
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        {%- if site.show_excerpts -%}
-            <div class="post-excerpt">
-                {{ post.excerpt }}
-            </div>
-        {%- endif -%}
+</div>
 
 
+{{ content }}
+
+{%- if site.posts.size > 0 -%}
+
+    {%- assign post = site.posts.first -%}
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <h1 class="post-title">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+            {%- if post.subtitle -%}
+            : {{ post.subtitle }}
+            {%- endif -%}
+        </a>
+    </h1>
+
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    {%- if site.show_excerpts -%}
+        <div class="post-excerpt">
+            {{ post.excerpt }}
+        </div>
     {%- endif -%}
 
-</main>
+
+{%- endif -%}
+
