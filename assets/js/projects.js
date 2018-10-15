@@ -3,7 +3,21 @@ window.Event = new Vue();
 Vue.component('project-nav-item', {
 
     props: {
-        project: { type: Number, required: true }
+        project: { type: Number, required: true },
+    },
+
+    data: function() {
+        return {
+            isSelected: false
+        }
+    },
+
+    created: function() {
+        if (this.project == 1) this.isSelected = true;
+        let vm = this;
+        Event.$on('display-project', function(event) {
+            vm.isSelected = (event.project == vm.project);
+        });
     },
 
     computed: {
@@ -12,7 +26,10 @@ Vue.component('project-nav-item', {
         }
     },
 
-    template: '<li><a href="#" @click="broadcastProject"><slot></slot></a></li>',
+    template: `
+        <a :href="this.url" :class="{ active: this.isSelected }" @click="broadcastProject">
+            <slot></slot>
+        </a>`,
 
     methods: {
         broadcastProject: function() {
@@ -24,7 +41,7 @@ Vue.component('project-nav-item', {
 
 Vue.component('project-nav', {
 
-    template: '<ul><slot></slot></ul>'
+    template: '<nav class="project-nav"><slot></slot></nav>'
 });
 
 Vue.component('highlight', {
@@ -58,12 +75,11 @@ Vue.component('project-card', {
         }
     },
 
-    mounted: function() {
+    created: function() {
+        if (this.id == 1) this.isVisible = true;
         let vm = this;
         Event.$on('display-project', function(event) {
-
             vm.isVisible = (event.project == vm.id);
-            console.log(vm.id, vm.isVisible);
         });
     },
 
@@ -100,10 +116,51 @@ Vue.component('project-card', {
 });
 
 Vue.component('project-collection', {
+
+    props: {
+        projectCount: { type: Number, required: true }
+    },
+
+    data: function() {
+        return {
+            currentProject: 1
+        }
+    },
+
+    created: function() {
+        let vm = this;
+        Event.$on('display-project', function(event) {
+            vm.currentProject = event.project;
+        });
+    },
+
+    computed: {
+        canGoPrevious: function() {
+            return (this.currentProject > 1);
+        },
+        canGoNext: function() {
+            return (this.currentProject < this.projectCount);
+        }
+    },
+
     template: `
         <div class="portfolio-list">
+            <div class="pagination">
+                <button type="button" class="left" v-if="this.canGoPrevious" @click="prevProject">&lt;</button>
+                <button type="button" class="right" v-if="this.canGoNext" @click="nextProject">&gt;</button>
+            </div>
             <slot></slot>
-        </div>`
+        </div>`,
+
+    methods: {
+        prevProject: function() {
+            Event.$emit('display-project', { project: this.currentProject - 1 });
+        },
+
+        nextProject: function() {
+            Event.$emit('display-project', { project: this.currentProject + 1 });
+        }
+    }
 });
 
 new Vue({

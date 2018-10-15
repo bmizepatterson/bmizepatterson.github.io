@@ -7,18 +7,19 @@ title: Portfolio
 
 {%- if site.projects.size > 0 -%}
 {%- assign projects = site.projects | sort: 'date' | reverse -%}
+
+{%- comment -%}
 <project-nav>
     {%- for project in projects -%}
-        {%- if project.display -%}
-            <project-nav-item :project="{{ forloop.index }}">{{ project.name }}</project-nav-item>
-        {%- endif -%}
+        <project-nav-item :project="{{ forloop.index }}">{{ project.name }}</project-nav-item>
     {%- endfor -%}
 </project-nav>
+{%- endcomment -%}
 
-<project-collection>
+
+<project-collection :project-count="{{ site.projects.size }} ">
 
     {%- for project in projects -%}
-        {%- if project.display -%}
 
             <project-card
                 :id="{{ forloop.index }}"
@@ -42,7 +43,6 @@ title: Portfolio
 
             </project-card>
 
-        {%- endif -%}
     {%- endfor -%}
 
 </project-collection>

@@ -194,8 +194,34 @@ main {
 /**
  * PORTFOLIO LIST
  */
+.project-nav {
+	font-size: $small-font-size;
+
+	a {
+		display: inline-block;
+		padding: $spacing-unit / 2;
+	}
+}
 .portfolio-list {
 	margin-bottom: $spacing-unit;
+
+	.pagination {
+		button {
+			font-size: $base-font-size;
+			color: $off-white;
+			background: $suit-brown;
+			border: 0;
+			outline: none;
+			display: block;
+			height: 304px;
+		}
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+	}
 
 	.project-repo-link {
 		text-align: right;

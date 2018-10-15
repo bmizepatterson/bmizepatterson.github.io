@@ -1,5 +1,4 @@
----
-display: false
+/---
 name: JavaScript Calculator
 description: A deceptively simple JavaScript calculator
 repo_link: https://github.com/bmizepatterson/js-calculator
