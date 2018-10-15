@@ -143,12 +143,15 @@ Vue.component('project-collection', {
         }
     },
 
+    delimiters: ["((", "))"],
+
     template: `
         <div class="portfolio-list">
-            <div class="pagination">
-                <button type="button" class="left" v-if="this.canGoPrevious" @click="prevProject">&lt;</button>
-                <button type="button" class="right" v-if="this.canGoNext" @click="nextProject">&gt;</button>
-            </div>
+            <p class="pagination">
+                <button type="button" class="left" :disabled="!this.canGoPrevious" @click="prevProject">&lt;</button>
+                <span>(( this.currentProject )) of (( this.projectCount ))</span>
+                <button type="button" class="right" :disabled="!this.canGoNext" @click="nextProject">&gt;</button>
+            </p>
             <slot></slot>
         </div>`,
 

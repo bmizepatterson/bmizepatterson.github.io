@@ -203,23 +203,34 @@ main {
 	}
 }
 .portfolio-list {
-	margin-bottom: $spacing-unit;
 
 	.pagination {
+		text-align: center;
+
 		button {
 			font-size: $base-font-size;
 			color: $off-white;
-			background: $suit-brown;
+			background: #787878;
 			border: 0;
 			outline: none;
-			display: block;
-			height: 304px;
+			display: inline-block;
+			padding: 0 $spacing-unit/2;
+			height: $spacing-unit;
+			line-height: $spacing-unit;
+			border-radius: 2px;
+		}
+		button[disabled] {
+			background: #ccc;
+		}
+		button:active {
+			background-color: $suit-brown;
 		}
 		.left {
-			float: left;
 		}
 		.right {
-			float: right;
+		}
+		span {
+			padding: 0 $spacing-unit;
 		}
 	}
 
@@ -452,4 +463,8 @@ a.reversefootnote {
   display: inline-block;
   vertical-align: text-top;
   fill: currentColor;
+}
+
+[v-cloak] {
+	display: none;
 }
