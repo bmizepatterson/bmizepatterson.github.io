@@ -84,6 +84,10 @@ main {
 	padding-top: $spacing-unit;
 }
 
+
+/**
+ * ABOUT PAGE
+ */
 .tagline {
 	color: $grey-color;
 	font-size: $small-font-size;
@@ -117,6 +121,8 @@ main {
 	min-width: $min-width;
 	color: $off-white;
 	border: none;
+	position: fixed;
+	width: 100%;
 
 	.site-nav {
 		margin-top: 75px;
@@ -125,16 +131,23 @@ main {
 		.page-link:visited {
 			color: $off-white;
 			text-decoration: none;
-			&:hover {
-				text-decoration: underline;
-				color: inherit;
+			&::before {
+				position: relative;
+				top: -1px;
+				left: -3px;
+				content: "»";
+				opacity: 0;
+				transition: 0.2s;
+			}
+			&:hover::before {
+				opacity: 1;
 			}
 		}
 
 		@include media-query($on-palm) {
 			background: none;
 			border: none;
-			margin-top: 0;
+			margin-top: $spacing-unit;
 		}
 	}
 }
