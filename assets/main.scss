@@ -84,6 +84,14 @@ main {
 	padding-top: $spacing-unit;
 }
 
+// Make wrapper wider on large screens
+.wrapper {
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(1100 - (#{$spacing-unit}) * 2);
+    max-width:         calc(1100 - (#{$spacing-unit}) * 2);
+  }
+}
+
 
 /**
  * ABOUT PAGE
@@ -175,7 +183,7 @@ main {
  */
 .parallax {
 	background-image: radial-gradient(transparent, rgba(0,0,0,0.4)), url({{ "/assets/img/ben1500.jpg" | relative_url }});
-	background-position: 0 40%;
+	background-position: center 40%;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
