@@ -23,7 +23,7 @@ $spacing-unit:     30px;
 $min-width:		   250px;	// Absolute minimum width of the site
 
 $text-color:       $chalky-black;
-$background-color: $off-white;
+$background-color: $white;
 
 // Brand color is used for links
 $brand-color:      $checker-blue;
@@ -91,14 +91,23 @@ main {
     max-width:         calc(1100 - (#{$spacing-unit}) * 2);
   }
 }
+.container {
+	margin: $spacing-unit;
+}
+.text-muted {
+	color: $grey-color;
+}
+.text-center {
+	text-align: center;
+}
 
 
 /**
  * ABOUT PAGE
  */
 .tagline {
-	color: $grey-color;
 	font-size: $small-font-size;
+	@extend .text-muted;
 }
 .social-media-list {
 	margin-bottom: $spacing-unit;
@@ -116,21 +125,23 @@ main {
 /**
  * SITE HEADER
  */
-#logo {
-	font-family: $logo-font-family;
-	font-size: 100px;
-	a, a:hover {
-		color: $off-white;
-		text-decoration: none;
-	}
-}
 
 .site-header {
 	min-width: $min-width;
 	color: $off-white;
 	border: none;
-	position: fixed;
 	width: 100%;
+    position: fixed;
+    transition: 0.2s;
+
+	#logo {
+		font-family: $logo-font-family;
+		font-size: 100px;
+		a, a:hover {
+			color: $off-white;
+			text-decoration: none;
+		}
+	}
 
 	.site-nav {
 		margin-top: 75px;
@@ -157,6 +168,18 @@ main {
 			border: none;
 			margin-top: $spacing-unit;
 		}
+	}
+}
+
+.site-header.collapsed {
+	background-color: $chalky-black;
+
+	#logo {
+		font-size: 50px;
+	}
+
+	.site-nav {
+		margin-top: 10px;
 	}
 }
 
