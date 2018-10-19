@@ -135,6 +135,9 @@ main {
 	a:hover svg {
 		transform: scale(1.25,1.25);
 	}
+	a:last-child {
+		margin-right: 0;
+	}
 }
 
 /**
@@ -147,6 +150,7 @@ main {
 	border: none;
 	width: 100%;
     position: fixed;
+    z-index: 2;
     transition: $transition-duration;
 
 	.header-wrapper {
