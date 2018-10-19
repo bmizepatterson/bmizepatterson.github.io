@@ -36,7 +36,6 @@ plugins:
 show_excerpts: true
 header_pages:
   - blog.html
-  - about.md
   - portfolio.html
 permalink: /:year/:month/:day/:title/
 
