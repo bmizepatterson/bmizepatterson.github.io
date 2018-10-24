@@ -84,6 +84,7 @@ blockquote, {
 }
 main {
 	padding-top: $spacing-unit;
+	margin-top: 75px;
 }
 
 
@@ -146,6 +147,7 @@ main {
 
 .site-header {
 	min-width: $min-width;
+	background-color: $chalky-black;
 	color: $off-white;
 	border: none;
 	width: 100%;
@@ -170,7 +172,7 @@ main {
 
 	#logo {
 		font-family: $logo-font-family;
-		font-size: 100px;
+		font-size: 50px;
 		transition: $transition-duration;
 
 		a, a:hover {
@@ -180,7 +182,7 @@ main {
 	}
 
 	.site-nav {
-		margin-top: 75px;
+		margin-top: 5px;
 		font-size: $small-font-size;
 		transition: $transition-duration;
 
@@ -203,22 +205,18 @@ main {
 				opacity: 1;
 			}
 		}
-
-		@include media-query($on-palm) {
-			margin-top: $spacing-unit;
-		}
 	}
 }
 
-.site-header.collapsed {
-	background-color: $chalky-black;
+.expanded .site-header {
+	background: none;
 
 	#logo {
-		font-size: 50px;
+		font-size: 100px;
 	}
 
 	.site-nav {
-		margin-top: 5px;
+		margin-top: 75px;
 	}
 }
 
@@ -330,10 +328,6 @@ main {
 		}
 		button:active {
 			background-color: $suit-brown;
-		}
-		.left {
-		}
-		.right {
 		}
 		span {
 			padding: 0 $spacing-unit;

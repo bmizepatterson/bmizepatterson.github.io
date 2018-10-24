@@ -1,16 +1,17 @@
 let tick = false;
+let header = document.getElementById("header-container");
 
 function setHeaderClass(scroll_pos) {
     if (scroll_pos > 600) {
-        document.getElementById("site-header").classList.add('collapsed');
+        header.classList.remove('expanded');
     } else {
-        document.getElementById("site-header").classList.remove('collapsed');
+        header.classList.add('expanded');
     }
 }
 
 window.addEventListener('scroll', function(e) {
 
-    if (!tick) {
+    if (!tick && header) {
 
         window.requestAnimationFrame(function() {
             setHeaderClass(window.scrollY);
