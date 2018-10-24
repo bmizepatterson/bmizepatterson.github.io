@@ -281,9 +281,12 @@ main {
 
 	&.jumbotron {
 		height: 100%;
+		// Fix for small screens
+		@include media-query($on-palm) {
+			background-attachment: scroll;
+			background-size: auto 600px;
+		}
 	}
-
-
 
 	&.bottom {
 		height: 100%;
@@ -293,6 +296,8 @@ main {
 			background-attachment: scroll;
 		}
 	}
+
+
 }
 
 /**
