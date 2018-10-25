@@ -153,7 +153,11 @@ main {
 	width: 100%;
     position: fixed;
     z-index: 2;
-    transition: $transition-duration;
+	transition: $transition-duration;
+
+	&.slide-up {
+		transform: translateY(-100px);
+	}
 
 	.header-wrapper {
 	  max-width: 1040px;

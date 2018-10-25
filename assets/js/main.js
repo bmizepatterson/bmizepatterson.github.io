@@ -1,25 +1,35 @@
 let tick = false;
-let header = document.getElementById("header-container");
+let headerContainer = document.getElementById("header-container");
+let header = document.getElementById("site-header");
 
-function setHeaderClass(scroll_pos) {
-    if (scroll_pos > 500) {
-        header.classList.remove('expanded');
-    } else {
-        header.classList.add('expanded');
-    }
-}
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener('scroll', windowScroll);
 
-    if (!tick && header) {
+function windowScroll(e) {
 
-        window.requestAnimationFrame(function() {
-            setHeaderClass(window.scrollY);
+    if (!tick) {
+
+        window.requestAnimationFrame(function () {
+            setHeaderClass();
             tick = false;
         });
 
         tick = true;
-
     }
+}
 
-});
+function setHeaderClass() {
+    if (headerContainer) {
+        if (window.pageYOffset > 500) {
+            headerContainer.classList.remove('expanded');
+        } else {
+            headerContainer.classList.add('expanded');
+        }
+    } else {
+        if (window.pageYOffset + window.innerHeight > document.body.getBoundingClientRect().height - 100) {
+            header.classList.add('slide-up');
+        } else {
+            header.classList.remove('slide-up');
+        }
+    }
+}
