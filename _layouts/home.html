@@ -15,7 +15,6 @@ layout: default
 <section class="page-content blog-cards">
 
 {%- if site.posts.size > 0 -%}
-    <h2 class="text-muted">From the blog</h2>
 
     <div class="row">
     {%- for post in site.posts limit:3 -%}
@@ -25,7 +24,7 @@ layout: default
         
         {%- if post.image -%}
         <div class="col blog-card blog-image" style="background-image: linear-gradient(transparent 0%, black), url('{{ post.image | relative_url }}');">
-            
+
             <a href="{{ post.url | relative_url }}" class="card-link"></a>
             <h3 class="post-title">
                 {{ post.title | escape }}
