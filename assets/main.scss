@@ -75,7 +75,7 @@ code {
 	padding: 0 2px;
 	font-weight: bold;
 }
-blockquote, {
+blockquote {
 	letter-spacing: unset;
 	color: unset;
 	&:last-child {
@@ -425,7 +425,7 @@ main {
 a,
 .site-nav .page-link {
  	text-decoration: underline;
-	&:visited, {
+	&:visited {
 		color: $brand-color;
 	}
 	&:hover {
@@ -454,6 +454,9 @@ a.reversefootnote {
  * POSTS
  */
 .post {
+	.caption {
+		font-size: 12px;
+	}
 	.post-header {
 		margin-bottom: 0;
 		.post-title {

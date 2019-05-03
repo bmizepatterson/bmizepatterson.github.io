@@ -3,6 +3,13 @@ layout: page
 ---
 <article class="post h-entry" id="post-top" itemscope itemtype="http://schema.org/BlogPosting">
 
+    {%- if page.image -%}
+    <img src="{{ page.image | relative_url }}" />
+        {%- if page.image_caption -%}
+        <small class="caption text-muted">{{ page.image_caption | markdownify }}</small>
+        {%- endif -%}   
+    {%- endif -%}
+
     <header class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
         {%- if page.subtitle -%}
