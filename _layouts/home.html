@@ -22,9 +22,20 @@ layout: default
 
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
-
+        
+        {%- if post.image -%}
+        <div class="col blog-card blog-image" style="background-image: linear-gradient(transparent 0%, black), url('{{ post.image | relative_url }}');">
+            
+            <a href="{{ post.url | relative_url }}" class="card-link"></a>
+            <h3 class="post-title">
+                {{ post.title | escape }}
+                {%- if post.subtitle -%}
+                : {{ post.subtitle }}
+                {%- endif -%}
+            </h3>
+        {%- else -%}
         <div class="col blog-card">
-            <!-- <div class="blog-card"> -->
+            
             <h3 class="post-title">
                 <a class="post-link" href="{{ post.url | relative_url }}">
                     {{ post.title | escape }}
@@ -33,14 +44,15 @@ layout: default
                     {%- endif -%}
                 </a>
             </h3>
-
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {%- endif -%}
+            
+            <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
             {%- if site.show_excerpts -%}
             <div class="post-excerpt">
                 {{ post.excerpt }}
             </div>
             {%- endif -%}
-            <!-- </div> -->
+
         </div>
     {%- endfor -%}
     </div>
