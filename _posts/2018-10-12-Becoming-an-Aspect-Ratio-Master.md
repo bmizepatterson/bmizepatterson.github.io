@@ -5,6 +5,8 @@ date: 2018-10-12 13:23:52
 categories:
     - CSS
 excerpt: "Perhaps the single most impactful aspect of a web site is its imagery, but images are deceptively difficult to use effectively. Let's discuss a technique guaranteed to preserve an image's aspect ratio, while ensuring it appears at the desired size on your web page."
+image: assets/img/2018-10-12-ratio.png
+image_caption: "FakeRealLogSpiral.png: Cypderivative work: Silverhammermba &amp; Jahobr [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)"
 ---
 
 Perhaps the single most impactful aspect of a web site is its imagery. A site can have a lovely color scheme, clear fonts, and simple navigation, but if the images are blurry, smooshed, or just plain absent a visitor is unlikely to be impressed. On the other hand, most visitors will have tremendous patience with a less-than-beautiful font choice or use of whitespace if there are a few images on the site that make them say, "Wow!"
