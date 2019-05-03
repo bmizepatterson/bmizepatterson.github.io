@@ -6,6 +6,7 @@ categories:
     - Jekyll
     - Vue.js
 excerpt: "Is it possible to incorporate Vue.js into a site built with Jekyll? You betcha! But watch out for a few sticky wickets..."
+image: assets/img/2018-10-22-vue-jekyll.png
 ---
 
 [Jekyll](https://jekyllrb.com/) [makes it easy](https://jekyllrb.com/docs/collections/) to list out, say, all of the projects I have in my portfolio. But since each project takes up quite a bit of space, I wanted to find a way to display one at a time, with "next" and "previous" buttons for pagination. Something like this:
