@@ -1,10 +1,10 @@
 ---
-title: Laravel's APP_KEY and the Encryption Minefield
+title: Treading Lightly in the Encryption Minefield
 layout: post
 date: 2019-05-03 8:38
 categories:
     - Laravel
-excerpt: "Tips for managing the APP_KEY for your Laravel application"
+excerpt: "A horror story, plus tips for using Laravel's encryption functionality"
 image: assets/img/2019-05-03-cryptography.jpg
 image_caption: autor de la página [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 ---
