@@ -8,54 +8,85 @@ layout: default
     </div>
 </div>
 
-<div class="container">
+<div>
 
-<section class="page-content">{{ content }}</section>
+    <section class="page-content">
+        <div class="d-flex flex-row align-items-center justify-content-center">
+            <img src="{{ 'assets/img/ben-30-300.jpg' | relative_url }}" class="img-circle" height="300" width="300" alt="Benjamin Mize Patterson greets you">
+            <div class="p-5">
+                <h1 class="pb-1">Benjamin Mize Patterson</h1>
+                <p class="tagline pb-1">educator &bull; classicist &bull; developer &bull; eater&nbsp;of&nbsp;chocolate&nbsp;&#x1F36B;</p>
 
-<section class="page-content blog-cards">
+                {%- include social.html -%}
+            </div>
+        </div>
+    </section>
+    <section class="page-content">
+        <div class="wrapper">
+            <p class="text-blue" style="font-size:2rem; font-weight:bold;">I like to build things.</p>
+            <div>
+                <div class="ml-5">
+                    <p>As an <strong class="text-blue">educator</strong>, I build a safe place for you to learn.</p>
+                    <div class="ml-5">
+                        <p>As a <strong class="text-blue">writer</strong>, I build images in your imagination.</p>
+                        <div class="ml-5">
+                            <p>And as a <strong class="text-blue">web developer</strong>, I build pathways that connect you to information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-{%- if site.posts.size > 0 -%}
+    {%- if site.posts.size > 0 -%}
 
-    <div class="row">
-    {%- for post in site.posts limit:3 -%}
+    <section class="p-2 bg-green">
+        <h3>Latest from the blog</h3>
+        <div class="row blog-cards">
+        {%- for post in site.posts limit:3 -%}
 
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
-        
-        {%- if post.image -%}
-        <div class="col blog-card blog-image" style="background-image: linear-gradient(transparent 0%, black), url('{{ post.image | relative_url }}');">
 
-            <a href="{{ post.url | relative_url }}" class="card-link"></a>
-            <h3 class="post-title">
-                {{ post.title | escape }}
-                {%- if post.subtitle -%}
-                : {{ post.subtitle }}
-                {%- endif -%}
-            </h3>
-        {%- else -%}
-        <div class="col blog-card">
-            
-            <h3 class="post-title">
-                <a class="post-link" href="{{ post.url | relative_url }}">
+            {%- if post.image -%}
+            <div class="col blog-card blog-image" style="background-image: linear-gradient(transparent 0%, black), url('{{ post.image | relative_url }}');">
+
+                <a href="{{ post.url | relative_url }}" class="card-link"></a>
+                <h3 class="post-title">
                     {{ post.title | escape }}
                     {%- if post.subtitle -%}
                     : {{ post.subtitle }}
                     {%- endif -%}
-                </a>
-            </h3>
-        {%- endif -%}
-            
-            <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
-            {%- if site.show_excerpts -%}
-            <div class="post-excerpt">
-                {{ post.excerpt }}
-            </div>
+                </h3>
+            {%- else -%}
+            <div class="col blog-card">
+
+                <h3 class="post-title">
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                        {%- if post.subtitle -%}
+                        : {{ post.subtitle }}
+                        {%- endif -%}
+                    </a>
+                </h3>
             {%- endif -%}
 
-        </div>
-    {%- endfor -%}
-    </div>
-{%- endif -%}
+                <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
+                {%- if site.show_excerpts -%}
+                <div class="post-excerpt">
+                    {{ post.excerpt }}
+                </div>
+                {%- endif -%}
 
-</section>
+            </div>
+        {%- endfor -%}
+        </div>
+    </section>
+
+    {%- endif -%}
+
+    <footer class="bg-brown text-center p-2">
+        <small class="text-tiny text-white">&copy; 2019, Benjamin Mize Patterson</small>
+    </footer>
+
 </div>
