@@ -1,0 +1,34 @@
+.text-white {
+    color: var(--white);
+}
+.text-off-white {
+    color: var(--off-white);
+}
+.text-black {
+    color: var(--chalky-black);
+}
+.text-green {
+    color: var(--creamy-green);
+}
+.text-blue {
+    color: var(--checker-blue);
+}
+.text-brown {
+    color: var(--suit-brown);
+}
+.text-tiny {
+    font-size: var(--tiny-font-size);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: var(--gray);
+    padding-right: 5px;
+    vertical-align: text-top;
+}
