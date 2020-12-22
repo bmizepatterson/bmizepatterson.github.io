@@ -68,6 +68,11 @@
 .ml-4 { margin-left: var(--spacers-4); }
 .ml-5 { margin-left: var(--spacers-5); }
 
+main {
+    position: relative;
+    top: 75px;
+    background-color: var(--white);
+}
 .page-content {
     padding: var(--spacer) 0;
 }

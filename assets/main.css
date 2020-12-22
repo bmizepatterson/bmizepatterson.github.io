@@ -12,14 +12,21 @@
 
 
 /**
- * UTILITIES
+ * BACKGROUNDS
  */
+.bg-white {
+    background-color: var(--white);
+}
 .bg-green {
     background-color: var(--creamy-green);
-    color: var(--off-white);
 }
 .bg-brown {
     background-color: var(--suit-brown);
+}
+.bg-black {
+    background-color: var(--chalky-black);
+}
+.bg-green, .bg-brown, .bg-black {
     color: var(--off-white);
 }
 
@@ -27,24 +34,11 @@
 /**
  * LINKS
  */
-a:visited, .site-nav .page-link:visited {
+a, a:visited {
     color: var(--brand-color);
 }
-a:hover, .site-nav .page-link:hover {
+a:hover {
 	color: var(--link-hover-color);
-}
-a.post-category,
-a.post-category:visited {
-	/* font-size: $small-font-size; */
-	text-decoration: none;
-	background-color: var(--gray);
-	color: var(--off-white);
-	border-radius: 5px;
-    padding: 3px 10px;
-    margin-left: 5px;
-}
-a.post-category:hover {
-	background-color: var(--gray-dark);
 }
 a.reversefootnote {
 	text-decoration: none;
@@ -122,7 +116,8 @@ a.reversefootnote {
     transition: var(--transition-duration);
 }
 
-#logo a, a:hover {
+#logo a,
+#logo a:hover {
     color: var(--off-white);
     text-decoration: none;
 }
@@ -212,7 +207,7 @@ a.reversefootnote {
 }
 .footnotes ol, .footnotes li, .footnotes p, .footnotes code {
     font-size: 0.9rem;
-    color: #777;
+    color: var(--chalky-black);
 }
 
 
@@ -240,7 +235,7 @@ a.reversefootnote {
 }
 
 .parallax.bottom {
-    height: 100%;
+    height: 100vh;
     background-attachment: fixed;
 }
 @media screen and (max-width: 600px) {
@@ -308,25 +303,27 @@ a.reversefootnote {
 /**
  * POST LISTS
  */
- /*
 .post-list {
-	& > li,
-	p {
-	    font-size: initial;
-	    line-height: initial;
-	}
-	~ .rss-subscribe {
-		font-size: $small-font-size;
-	}
+    list-style-type: none;
+    margin-left: 0;
 }
-.post-excerpt {
-	margin-bottom:15px;
+.post-list > li,
+.post-list p {
+    font-size: initial;
+    line-height: initial;
 }
-*/
+.post-list > li {
+    margin-bottom: var(--spacers-5);
+}
+
 
 /**
  * POSTS
  */
+.post-meta {
+    font-size: var(--small-font-size);
+    color: var(--gray);
+}
  /*
 .post {
 	.caption {
@@ -396,16 +393,6 @@ a.reversefootnote {
 	}
 }
 */
-
-/**
- * CATEGORY PAGE
- */
-.archive-group .category-head {
-	margin-top: 2rem;
-}
-.archive-group article {
-	margin-left: 20px;
-}
 
 /**
  * SNIPPET

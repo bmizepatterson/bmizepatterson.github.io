@@ -21,8 +21,9 @@
     --base-font-size:   20px;
     --base-line-height: 1.5;
     --base-font-weight: 400;
+    --big-font-size:    calc(var(--base-font-size) * 1.5);
     --small-font-size:  calc(var(--base-font-size) * 0.8);
-    --tiny-font-size:   14px;
+    --tiny-font-size:   calc(var(--base-font-size) * 0.7);
     --transition-duration: 0.2s;
 
     /* Layout */
